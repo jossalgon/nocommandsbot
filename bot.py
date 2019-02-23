@@ -8,7 +8,7 @@ config = configparser.ConfigParser()
 config.read('config.ini')
 
 TG_TOKEN = config['Telegram']['token']
-PORT = int(os.environ.get('PORT', '8443'))
+PORT = int(config['Telegram']['PORT'])
 EXTERNAL_HOST = config['Telegram']['EXTERNAL_HOST']
 
 
